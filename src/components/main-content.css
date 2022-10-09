@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+
+
+
+.main-content{
+    display: flex;
+    justify-content: center;
+}
+
+.parent{
+    min-height: calc(100vh - 58px - 12vh);
+
+}
+
+.main-content div {
+    padding-left: 80px;
+}
+
+div input {
+    background-color: #F5F5F7;
+    width: 500px;
+    height: 45px;
+}
+
+
+.cart {
+    margin: 5px;
+}
+
+
+div .icon {
+    /* display: inline-block; */
+    height: 50px; 
+    width: 50px;
+    background-color: orange;
+}
+
+
+.search-list{
+    display: flex;
+    list-style: none;
+}
+
+.slider-parent img{
+    height: calc(60vh - 100px);
+    width: auto;
+    display: block;
+    margin: auto;
+}
+
+
+.products-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.products-parent div {
+    height: 310px;
+    padding: 5px;
+
+}
+
+.products-parent p:nth-child(2) {
+    inline-size: 230px;
+    overflow-wrap: break-word;
+}
+.products-parent p:nth-child(3) {
+    color: #f85606;
+}
+
+.products{
+    font-family: 'Roboto', sans-serif;
+
+    background-color: rgba(158,158,158,.2);
+}
