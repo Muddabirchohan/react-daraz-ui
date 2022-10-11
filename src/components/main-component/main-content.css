@@ -133,3 +133,19 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+
+.slick-dots li{
+    margin-left: -80px !important;
+}
+
+/* .slick-dots {
+   height: 20px;
+   width: 200px;
+} */
+
+/* .custom-image{
+    border: 1px solid black !important;
+    margin-left: -60px !important;
+
+} */
+

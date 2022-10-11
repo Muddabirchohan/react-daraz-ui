@@ -50,9 +50,9 @@ export default function Productdetail() {
     const settings = {
         customPaging: function (i) {
             return (
-                <a>
-                    <img src={product.images[i]} className="parent-image" width="30px" />
-                </a>
+                <div className='custom-image'>  
+                    <img src={product.images[i]} className="parent-image" width="30px" height="40px" />
+                </div>
             );
         },
         dots: true,
@@ -109,19 +109,19 @@ export default function Productdetail() {
                         {/* <img src={product.image} height="100px" /> */}
                         <Slider {...settings}>
                             <div>
-                                <img src={product.images[0]} width="220px" height="200px" />
+                                <img src={product.images[0]} width="380px" height="200px" />
                             </div>
                             <div>
-                                <img src={product.images[1]} width="220px" height="200px" />
+                                <img src={product.images[1]} width="380px" height="200px" />
                             </div>
                             <div>
-                                <img src={product.images[2]} width="220px" height="200px" />
+                                <img src={product.images[2]} width="380px" height="200px" />
                             </div>
                             <div>
-                                <img src={product.images[3]} width="220px" height="200px" />
+                                <img src={product.images[3]} width="380px" height="200px" />
                             </div>
                             <div>
-                                <img src={product.images[4]} width="220px" height="200px" />
+                                <img src={product.images[4]} width="380px" height="200px" />
                             </div>
                         </Slider>
 
