@@ -6,12 +6,16 @@ import reportWebVitals from './reportWebVitals';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Router from './router';
+import {CounterContextProvider} from './context/countercontext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <CounterContextProvider> 
+    <Router/>
+    </CounterContextProvider>
   </React.StrictMode>
 );
 

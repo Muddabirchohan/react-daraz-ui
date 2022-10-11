@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import slider1 from "./../images/slider1.png"
-import slider2 from "./../images/slider2.jpg"
+import slider1 from "./../../images/slider1.png"
+import slider2 from "./../../images/slider2.jpg"
 
 
 export default class SimpleSlider extends Component {
