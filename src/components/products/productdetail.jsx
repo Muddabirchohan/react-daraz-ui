@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Route, Link, Routes, useParams } from 'react-router-dom';
 import "./product-detail.css";
 import logo from "./../../images/logo_daraz.png"
@@ -15,6 +15,7 @@ import slider2 from "./../../images/slider2.jpg"
 import Header from '../header/header';
 import SubHeader from '../main-component/sub-header';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { CoutnerCountext } from '../../context/countercontext';
 
 
 
@@ -46,6 +47,17 @@ export default function Productdetail() {
     }, [])
 
 
+
+    const cart = useContext(CoutnerCountext);
+
+    const {values : {addToCart}} = cart;
+
+    const add =  async () => {
+        await addToCart(product)
+    }
+
+
+    console.log("cart",cart)
 
     const settings = {
         customPaging: function (i) {
@@ -183,7 +195,7 @@ export default function Productdetail() {
                         <div className="buy-buttons">
                             <ButtonGroup aria-label="Basic example">
                                 <Button variant="danger" className='buy-now'> Buy Now </Button>
-                                <Button variant="primary" className='add-to-cart'>Add to cart </Button>
+                                <Button onClick={add} variant="primary" className='add-to-cart'>Add to cart </Button>
                             </ButtonGroup>
                         </div>
                     </div>

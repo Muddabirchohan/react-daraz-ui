@@ -4,6 +4,7 @@ import download from "./../../images/download.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSearch, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
 
 library.add(faSearch, faCartShopping);
 
@@ -28,7 +29,9 @@ export default function SubHeader() {
 
     <div className='cart'>
         <span style={{marginLeft: "5px",display:"inline-block",padding: "10px"}}> 
+        <Link to={`/cart`}>
         <FontAwesomeIcon icon="fa-solid fa-cart-shopping" size='lg' />
+        </Link>
         </span>
     </div>
 

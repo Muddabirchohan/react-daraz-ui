@@ -16,17 +16,18 @@ export default function Products() {
 
 
 
-    if (values.products.productsLoader) {
-        return <div className='loader'>
-            <Spinner animation="border" variant="primary" />
-        </div>
-    }
+    // if (values.products.productsLoader) {
+    //     return <div className='loader'>
+    //         <Spinner animation="border" variant="primary" />
+    //     </div>
+    // }
 
 
     return (
 
         <div className='products-parent'>
 
+        <div> total : {values.products.totalAmount} </div>
 
             {values.products.products && values.products.products.map((item, index) => {
                 const contractedTitle = item.title.length > 25 ? item.title.slice(0, 25) + "..." : item.title
