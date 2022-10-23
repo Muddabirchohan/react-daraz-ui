@@ -27,8 +27,12 @@ export const CounterContextProvider = ({ children }) => {
 
     useEffect(() => {
 
+        const abortCont = new AbortController()
+
         setProductLoader(true)
-        fetch('https://dummyjson.com/products')
+        fetch('https://dummyjson.com/products',{
+            signal: abortCont.signal
+        })
             .then(res => res.json())
             .then(json => {
                 
@@ -48,7 +52,16 @@ export const CounterContextProvider = ({ children }) => {
                 })
 
             })
-            .catch()
+            .catch(ex =>{
+                if(ex.name == "AbortError"){
+                    console.log("request aborted successfully")
+                }                
+            })
+
+
+            return () => {
+               abortCont.abort()
+            }
     }, [])
 
 

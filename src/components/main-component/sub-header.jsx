@@ -22,9 +22,7 @@ export default function SubHeader() {
         <input type="text" placeholder="search in daraz"/>
         <span style={{fontsize: "48px", backgroundColor: "orange",display:"inline-block",height: "44px",padding: "10px",color: "white"}}>
         <FontAwesomeIcon icon="search" size='lg' />
-
         </span>
-       
     </div>
 
     <div className='cart'>

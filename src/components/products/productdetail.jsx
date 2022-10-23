@@ -36,33 +36,54 @@ export default function Productdetail() {
 
 
     useEffect(() => {
-        fetch(`https://dummyjson.com/products/${params.id}`)
+
+        const abortCont = new AbortController()
+
+        fetch(`https://dummyjson.com/products/${params.id}`, {
+            signal: abortCont.signal
+        })
             .then((res) => res.json())
             .then((json) => setProduct(json))
-            .catch(ex => console.log(ex));
+            .catch(ex => {
+                if (ex.name == "AbortError") {
+                    console.log("request aborted successfully")
+                }
+            });
 
-        fetch('https://fakestoreapi.com/products/categories')
+        fetch('https://fakestoreapi.com/products/categories', {
+            signal: abortCont.signal
+        })
             .then(res => res.json())
             .then(json => setCategories(json))
+            .catch(ex => {
+                if (ex.name == "AbortError") {
+                    console.log("request aborted successfully")
+                }
+            });
+
+
+        return () => abortCont.abort()
+
+
     }, [])
 
 
 
     const cart = useContext(CoutnerCountext);
 
-    const {values : {addToCart}} = cart;
+    const { values: { addToCart } } = cart;
 
-    const add =  async () => {
+    const add = async () => {
         await addToCart(product)
     }
 
 
-    console.log("cart",cart)
+    console.log("cart", cart)
 
     const settings = {
         customPaging: function (i) {
             return (
-                <div className='custom-image'>  
+                <div className='custom-image'>
                     <img src={product.images[i]} className="parent-image" width="30px" height="40px" />
                 </div>
             );
@@ -81,7 +102,7 @@ export default function Productdetail() {
         return "loading..."
     }
 
- 
+
     return (
 
         <div>
