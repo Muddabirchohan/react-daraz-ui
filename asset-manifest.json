@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Muddabirchohan/react-daraz-ui/static/css/main.cdfbb627.css",
-    "main.js": "/Muddabirchohan/react-daraz-ui/static/js/main.2d725998.js",
+    "main.js": "/Muddabirchohan/react-daraz-ui/static/js/main.8378e220.js",
     "static/js/787.b67c5969.chunk.js": "/Muddabirchohan/react-daraz-ui/static/js/787.b67c5969.chunk.js",
     "static/media/slider1.png": "/Muddabirchohan/react-daraz-ui/static/media/slider1.508ea4a03a30e5bf974a.png",
     "static/media/slider2.jpg": "/Muddabirchohan/react-daraz-ui/static/media/slider2.7018f97546a2804a5079.jpg",
@@ -11,11 +11,11 @@
     "static/media/slick.woff": "/Muddabirchohan/react-daraz-ui/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Muddabirchohan/react-daraz-ui/index.html",
     "main.cdfbb627.css.map": "/Muddabirchohan/react-daraz-ui/static/css/main.cdfbb627.css.map",
-    "main.2d725998.js.map": "/Muddabirchohan/react-daraz-ui/static/js/main.2d725998.js.map",
+    "main.8378e220.js.map": "/Muddabirchohan/react-daraz-ui/static/js/main.8378e220.js.map",
     "787.b67c5969.chunk.js.map": "/Muddabirchohan/react-daraz-ui/static/js/787.b67c5969.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cdfbb627.css",
-    "static/js/main.2d725998.js"
+    "static/js/main.8378e220.js"
   ]
 }
