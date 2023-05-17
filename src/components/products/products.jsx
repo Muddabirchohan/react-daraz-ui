@@ -8,10 +8,81 @@ import { CoutnerCountext } from '../../context/countercontext';
 
 export default function Products() {
 
+    const teams = ["pakistan", "india", "newzeland"]
+    let matches = []
+
+    for (let i = 0; i < teams.length; i++) {
+
+        for (let j = 0; j < teams.length; j++) {
+
+            if (teams[i] !== teams[j]) {
+
+                const findWinner = [teams[i], teams[j]]
+
+                const matchPlayed = {
+                    first: teams[i],
+                    seconnd: teams[j],
+                    winner: findWinner[Math.round(Math.random())]
+                }
+
+                if (matches.length == 0) {
+                    matches.push(matchPlayed)
+                }
+
+                matches.map(item => {
+                    if (!(item.first.includes(teams[i]) || item.seconnd.includes(teams[j]) && item.first.includes(teams[j]) || item.seconnd.includes(teams[i]))) {
+                        matches.push(matchPlayed)
+                    }
+                })
+            }
+
+
+        }
+
+    }
+
+
+
+    const anounceWinner = () => {
+        let winners = []
+        const winner = matches.map(item => item.winner);
+
+        winner.map(item => {
+
+            if (winners.length == 0) {
+                winners.push({
+                    name: item,
+                    count: 1
+                })
+            }
+
+
+            if(winners.find(winn => winn.name == item)){
+                console.log("wiinners if",winners)
+
+             const index =  winners.findIndex(win => win.name == item)
+                winners[index].count+=1 
+            } else {
+                console.log("wiinners else",winners)
+
+                winners.push({
+                    name: item,
+                    count: 1
+                })
+            }
+
+
+        })
+
+        return winners
+    }
+
+    console.log("announce", anounceWinner())
+
 
 
     const productsC = useContext(CoutnerCountext);
-    const {values } = productsC;
+    const { values } = productsC;
 
 
 
