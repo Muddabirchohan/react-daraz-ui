@@ -15,7 +15,7 @@ import TodoForm from "./todo/todoForm";
 
 export default function Router() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react-daraz-ui">
 <Header/>
   <Routes>
     <Route path="/" element={<App />} />
